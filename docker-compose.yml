@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:4173"  # Puerto local 3000, puerto interno 4173 (Vite Preview)
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+
+  converter:
+    build: ./BackPy
+    ports:
+      - "6000:6000"
